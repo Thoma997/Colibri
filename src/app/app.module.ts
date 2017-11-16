@@ -11,6 +11,8 @@ import {AuthService} from "../services/auth";
 import { SigninPage } from '../pages/signin/signin';
 import {ConnectPage} from "../pages/connect/connect";
 import {TabsPage} from "../pages/tabs";
+import {NgxQRCodeModule} from "ngx-qrcode2";
+import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {TabsPage} from "../pages/tabs";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,6 +41,7 @@ import {TabsPage} from "../pages/tabs";
     AuthService,
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
