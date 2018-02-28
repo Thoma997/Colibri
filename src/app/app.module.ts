@@ -13,6 +13,9 @@ import {ConnectPage} from "../pages/connect/connect";
 import {TabsPage} from "../pages/tabs";
 import {NgxQRCodeModule} from "ngx-qrcode2";
 import {BarcodeScanner} from '@ionic-native/barcode-scanner';
+import { QRCodeModule } from 'angular2-qrcode';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +27,9 @@ import {BarcodeScanner} from '@ionic-native/barcode-scanner';
     TabsPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, QRCodeModule,
     IonicModule.forRoot(MyApp),
-    NgxQRCodeModule
+    NgxQRCodeModule, HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
