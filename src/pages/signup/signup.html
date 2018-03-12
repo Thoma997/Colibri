@@ -1,0 +1,53 @@
+
+<ion-header>
+</ion-header>
+
+
+<ion-content padding>
+  <p style="font-family: Montserrat; font-size: xx-large; text-align: center">Colibri</p>
+  <p style="font-family: Montserrat; font-size: large; text-align: center">The Future of Business Cards</p>
+  <div style="padding-top: 20%;">
+    <form #f="ngForm" (ngSubmit)="onSignUp(f)">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Prename</ion-label>
+          <ion-input
+            type="text"
+            name="signupPrename"
+            ngModel
+            required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input
+            type="text"
+            name="signupName"
+            ngModel
+            required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>E-Mail</ion-label>
+          <ion-input
+            type="text"
+            name="signupMail"
+            ngModel
+            required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input
+            type="password"
+            name="signupPassword"
+            ngModel
+            required></ion-input>
+        </ion-item>
+      </ion-list>
+      <button
+        ion-button
+        type="submit"
+        color="primary"
+        block
+        [disabled]="!f.valid">SignUp</button>
+    </form>
+  </div>
+</ion-content>
